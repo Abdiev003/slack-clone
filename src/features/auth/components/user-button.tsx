@@ -23,16 +23,16 @@ export const UserButton = () => {
     return null;
   }
 
-  const { image, name, email } = data;
+  const { image, name } = data;
 
   const avatarFallback = name!.charAt(0).toUpperCase();
 
   return (
     <DropdownMenu modal={false}>
       <DropdownMenuTrigger className="relative outline-none">
-        <Avatar className="size-10 transition hover:opacity-75">
-          <AvatarImage alt={name} src={image} />
-          <AvatarFallback className="bg-sky-500 text-white">
+        <Avatar className="size-10 rounded-md transition hover:opacity-75">
+          <AvatarImage alt={name} src={image} className="rounded-md" />
+          <AvatarFallback className="rounded-md bg-sky-500 text-white">
             {avatarFallback}
           </AvatarFallback>
         </Avatar>
